@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,5 +6,13 @@
 
 
 .main{
-  @apply bg-primary text-font text-3xl;
+  @apply bg-primary text-font text-3xl font-acme;
+}
+
+.list{
+  @apply w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-enfasis dark:border-gray-600 dark:text-white mx-auto;
+}
+
+.list-item{
+  @apply block w-full px-4 py-2 border-b border-gray-200 cursor-pointer hover:bg-focus hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-focus focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white rounded-lg;
 }

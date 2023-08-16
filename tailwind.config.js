@@ -7,12 +7,12 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-
+      acme: ['Acme'],
     },
     extend: {
       colors: {
         'primary': '#FFD9CE',
-        'secondary': '#C2E7D9',
+        'secondary': '#FDBCB4',
         'enfasis': '#BA3B46',
         'font': '#1D1E2C',
         'focus': '#4EA5D9',
