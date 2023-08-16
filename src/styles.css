@@ -22,16 +22,15 @@
 }
 
 .gifArea{
-  @apply grid md:grid-cols-3 sm:grid-cols-6 p-2 sm:p-0 gap-2 text-center;
+  @apply grid md:grid-cols-3 sm:grid-cols-6 md:mt-10 sm:p-0 gap-2 text-center;
 }
 
 .card{
-  @apply mx-auto col-span-1 sm:w-full md:w-10/12 justify-center bg-white rounded-2xl shadow-xl shadow-gray-400/20
-  hover:shadow-focus/60;
+  @apply mx-auto col-span-1 sm:w-full md:w-10/12 justify-center bg-white rounded-2xl shadow-xl shadow-gray-400/20 hover:shadow-focus/60;
 }
 
 .image{
-  @apply object-cover w-full h-28 max-h-36 rounded-lg;
+  @apply object-cover w-11/12 mx-auto h-28 max-h-36 rounded-lg;
 }
 
 .description{

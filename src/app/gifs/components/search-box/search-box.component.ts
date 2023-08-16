@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'gif-search-box',
@@ -6,9 +6,26 @@ import { Component } from '@angular/core';
     <h5>Buscar:</h5>
     <input type="text"
     class="input"
-    placeholder="Buscar">
-  `,
+    placeholder="Buscar"
+    (keyup.enter)="searchTag()"
+    #txtTagInput
+    >
+  `
 })
 export class SearchBoxComponent {
-  constructor (){}
+
+  @ViewChild('txtTagInput')
+  public tagInput !: ElementRef<HTMLInputElement>;
+
+  constructor() { }
+
+  // ? Metodo de Referencia Local
+  // searchTag(newTag: string): void{
+  //   console.log(newTag);
+  // }
+
+  searchTag() {
+    const newTag = this.tagInput.nativeElement.value;
+    console.log(newTag);
+  }
 }
