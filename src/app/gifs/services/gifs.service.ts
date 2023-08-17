@@ -8,10 +8,10 @@ import { Gif, SearchResponse } from '../interfaces/gifs.interfaces';
 export class GifsService {
 
   public gifList: Gif[] = [];
-
   private _tagsHistory: string[] = [];
+
   private apiKey:string = 'eIrqjjOVlqr1vb6bou4JQc7qLXUZhuwl';
-  private serviceUrl: string = 'https://api.giphy.com/v1/gifsg';
+  private serviceUrl: string = 'https://api.giphy.com/v1/gifs';
 
   constructor( private http:HttpClient) { }
 
@@ -35,12 +35,13 @@ export class GifsService {
 
     const params = new HttpParams()
       .set('api_key', this.apiKey)
-      .set('limit', '10')
+      .set('limit', '12')
       .set('q', tag)
 
     this.http.get< SearchResponse >(`${this.serviceUrl}/search`,{ params })
       .subscribe(( resp) => {
         this.gifList = resp.data;
+        console.log({gifs:this.gifList});
       })
   }
 

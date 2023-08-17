@@ -1,12 +1,12 @@
 <div class="gifArea">
-  <div class="card">
+  <div *ngFor="let gif of gifs" class="card">
     <div class="flex flex-col mb-2 h-auto">
       <div class="flex-shrink-0">
-        <img class="image" src="/assets/images/placeholders/neon-1.jpg" alt="">
+        <img class="image" [src]="gif.images.downsized_medium.url" [alt]="gif.title">
       </div>
       <div class="description">
         <div class="descriptionArea">
-            <p class="descriptionText">Filling text so you can see how it looks like with text. Did I said text?</p>
+            <p class="descriptionText">{{gif.title}}</p>
         </div>
       </div>
     </div>
