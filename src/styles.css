@@ -26,11 +26,11 @@
 }
 
 .card{
-  @apply mx-auto h-auto col-span-1 sm:w-full md:w-10/12 justify-center bg-white rounded-2xl shadow-xl shadow-gray-400/20 hover:shadow-focus/60;
+  @apply mx-auto col-span-1 sm:w-full md:w-10/12 justify-center bg-white rounded-2xl shadow-xl shadow-gray-400/20 hover:shadow-focus/60 hover:scale-110;
 }
 
 .image{
-  @apply object-cover w-11/12 mx-auto h-fit mt-1 max-h-36 rounded-lg;
+  @apply object-cover w-11/12 mx-auto h-full mt-1 max-h-36 rounded-lg;
 }
 
 .description{
