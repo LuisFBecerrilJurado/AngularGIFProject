@@ -1,10 +1,14 @@
 <div class="flex flex-col mb-2 h-auto">
-  <div class="flex-shrink-0">
+  <shared-lazy-image
+  [url]="gif.images.downsized_medium.url"
+  [alt]="gif.title||'No name'">
+  </shared-lazy-image>
+  <!-- <div class="flex-shrink-0">
     <img class="image" [src]="gif.images.downsized_medium.url" [alt]="gif.title">
-  </div>
+  </div> -->
   <div class="description">
     <div class="descriptionArea">
-        <p class="descriptionText">{{gif.title}}</p>
+        <p class="descriptionText">{{gif.title || 'No title'}}</p>
     </div>
   </div>
 </div>

@@ -7,9 +7,10 @@ import { GifsModule } from './gifs/gifs.module';
 
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
