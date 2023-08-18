@@ -1,14 +1,7 @@
 <div class="gifArea">
-  <div *ngFor="let gif of gifs" class="card">
-    <div class="flex flex-col mb-2 h-auto">
-      <div class="flex-shrink-0">
-        <img class="image" [src]="gif.images.downsized_medium.url" [alt]="gif.title">
-      </div>
-      <div class="description">
-        <div class="descriptionArea">
-            <p class="descriptionText">{{gif.title}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <gifs-card *ngFor="let gif of gifs" class="card"
+  [gif]="gif">
+
+  </gifs-card>
+
 </div>
