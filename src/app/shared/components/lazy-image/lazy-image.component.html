@@ -1,10 +1,9 @@
 <div class="flex-shrink-0">
-  <img class="imagen"
+  <img class="imagen animate__animated animate__fadeIn"
   [src]="url"
   [alt]="alt"
   (load)="onLoad()"
-  [ngStyle]="{ display: hasLoaded ? '': 'none'}"
-  >
+  [ngStyle]="{ display: hasLoaded ? '': 'none'}">
   <img
   *ngIf="!hasLoaded"
   src="assets/Ripple-2s-200px.svg"
