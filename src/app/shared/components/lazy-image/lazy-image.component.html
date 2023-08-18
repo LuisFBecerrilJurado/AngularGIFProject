@@ -1,4 +1,14 @@
 <div class="flex-shrink-0">
-  <!-- <img class="image" [src]="url" [alt]="alt"> -->
-  <img src="assets/Ripple-2s-200px.svg" alt="" class="loader">
+  <img class="imagen"
+  [src]="url"
+  [alt]="alt"
+  (load)="onLoad()"
+  [ngStyle]="{ display: hasLoaded ? '': 'none'}"
+  >
+  <img
+  *ngIf="!hasLoaded"
+  src="assets/Ripple-2s-200px.svg"
+  alt=""
+  class="loader"
+  >
 </div> -->
